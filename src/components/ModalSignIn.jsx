@@ -1,10 +1,11 @@
 import { useDispatch } from "react-redux";
 import { setSignInOpen } from "../utils/sidebarSlice";
+import { useState } from "react";
 
-function InputLabel({ type, labelId, placeholder }) {
+export function InputLabel({ type, labelId, placeholder, text }) {
     return (
         <label
-            className="flex flex-col gap-1 font-semibold mb-3 capitalize" htmlFor={labelId}>{type}
+            className="flex flex-col gap-1 font-semibold mb-3" htmlFor={labelId}>{text}
             <input
                 className={`rounded shadow-sm focus-within:outline-1 focus: outline-red-500 px-2 py-[0.3rem] text-gray-600 font-semibold`}
                 type={type} id={labelId}
@@ -17,6 +18,9 @@ function InputLabel({ type, labelId, placeholder }) {
 
 export default function ModalSignIn() {
     const dispatch = useDispatch();
+
+    const [isVisible, setVisible] = useState(false);
+
     return (
         <article
             className={`fixed z-[999] inset-0 backdrop-blur-sm bg-black bg-opacity-30 flex justify-center items-center font-montserrat`}
@@ -39,9 +43,28 @@ export default function ModalSignIn() {
 
                         <form id="sign-in" action="" className="mt-5 text-sm">
 
-                            <InputLabel type="email" labelId="email-input" placeholder="john@email.com" />
+                            <InputLabel type="email" labelId="email-input" text="Email" placeholder="john@email.com" />
 
-                            <InputLabel labelId="password-input" type="password" placeholder="enter password" />
+                            <div className="relative">
+                                <InputLabel labelId="password-input"
+                                    text="Password"
+                                    type={isVisible ? "text" : "password"}
+                                    placeholder="enter password" />
+
+                                <button
+                                    className="absolute top-7 right-2"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setVisible(!isVisible);
+                                    }}>
+                                    {isVisible ? <i
+                                        className="fa-regular fa-eye"
+                                    ></i> : <i
+                                        className="fa-regular fa-eye-slash"
+                                    ></i>}
+
+                                </button>
+                            </div>
 
 
                             <div className="flex items-center">

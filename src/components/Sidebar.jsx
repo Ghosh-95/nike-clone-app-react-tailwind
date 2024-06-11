@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { navLinks } from "../utils/contants";
 import { setSignInOpen, setRegisterOpen } from "../utils/sidebarSlice";
 import { useDispatch } from "react-redux";

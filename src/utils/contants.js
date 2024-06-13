@@ -33,22 +33,34 @@ export const products = [
     {
         imgURL: shoe4,
         name: "Nike Air Jordan-01",
-        price: "$200.20",
+        price: "₹16,816",
+        originalPrice: "20,180",
+        rating: 4.2,
+        offer: " 20% OFF"
     },
     {
         imgURL: shoe5,
         name: "Nike Air Jordan-10",
-        price: "$210.20",
+        price: "₹79,999",
+        originalPrice: "1,07,199",
+        rating: 4.8,
+        offer: " 34% OFF"
     },
     {
         imgURL: shoe6,
         name: "Nike Air Jordan-100",
-        price: "$220.20",
+        price: "₹18,480",
+        originalPrice: "28,828",
+        rating: 4,
+        offer: " 56% OFF"
     },
     {
         imgURL: shoe7,
         name: "Nike Air Jordan-001",
-        price: "$230.20",
+        price: "₹26,999",
+        originalPrice: "29,699",
+        rating: 3.8,
+        offer: " 10% OFF"
     },
 ];
 

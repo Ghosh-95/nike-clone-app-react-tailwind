@@ -13,7 +13,7 @@ export default function PopularProductCard({ imgURL, name, price, rating, offer,
 
                     <p className="text-lg md:text-xl font-semibold font-palanquin">{name}</p>
                     <div>
-                        <p className="text-coral-red max-sm:text-[1.4rem] md:text-2xl">{price} <span className="sm:text-sm text-[1.1rem] font-bold text-green-600">{offer}</span></p>
+                        <p className="text-coral-red max-sm:text-[1.4rem] md:text-2xl">{price} <span className="sm:text-sm font-bold bg-green-500 text-white p-1 rounded-sm">{offer}</span></p>
                         <p className="text-slate-gray line-through font-bold">{originalPrice}</p>
                     </div>
                 </div>

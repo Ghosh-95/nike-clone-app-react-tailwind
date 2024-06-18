@@ -13,7 +13,7 @@ export default function ReviewCard({ customerName, imgURL, rating, feedback }) {
             <p className="text-xl font-palanquin ">{customerName}</p>
 
             <span className="text-sm text-blue-400">
-                <i class="fa-solid fa-circle-check mr-1"></i>
+                <i className="fa-solid fa-circle-check mr-1"></i>
                 Verified customer
             </span>
         </div>
